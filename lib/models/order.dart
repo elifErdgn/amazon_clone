@@ -43,7 +43,7 @@ class Order {
           map['products']?.map((x) => Product.fromMap(x['product']))),
       quantity: List<int>.from(
         map['products']?.map(
-              (x) => x['quantity'],
+          (x) => x['quantity'],
         ),
       ),
       address: map['address'] ?? '',

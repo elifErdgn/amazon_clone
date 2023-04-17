@@ -1,20 +1,21 @@
+
 import 'package:flutter/material.dart';
 
 import 'common/widgets/bottom_bar.dart';
-import 'featuers/address/adress.dart';
-import 'featuers/admin/screens/add_product_screen.dart';
-import 'featuers/auth/auth_screen.dart';
-import 'featuers/home/screens/category_deals_screen.dart';
-import 'featuers/home/screens/home_screen.dart';
-import 'featuers/order_details/order_details_scren.dart';
-import 'featuers/product_details/product_detail_screen.dart';
-import 'featuers/search/search_screen.dart';
+import 'features/address/screens/address_screen.dart';
+import 'features/admin/screens/add_product_screen.dart';
+import 'features/auth/screens/auth_screen.dart';
+import 'features/home/screens/category_deals_screen.dart';
+import 'features/home/screens/home_screen.dart';
+import 'features/order_details/screens/order_details.dart';
+import 'features/product_details/screens/product_details_screen.dart';
+import 'features/search/screens/search_screen.dart';
 import 'models/order.dart';
 import 'models/product.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {
-    case AuthScreen.routeName :
+    case AuthScreen.routeName:
       return MaterialPageRoute(
         settings: routeSettings,
         builder: (_) => const AuthScreen(),
