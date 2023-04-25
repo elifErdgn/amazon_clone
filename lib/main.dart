@@ -1,14 +1,15 @@
 
+import 'package:amazon_clone/sadeceUI/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'common/widgets/bottom_bar.dart';
-import 'constants/global_variables.dart';
-import 'features/admin/screens/admin_screen.dart';
-import 'features/auth/screens/auth_screen.dart';
-import 'features/auth/services/auth_service.dart';
-import 'providers/user_provider.dart';
-import 'router.dart';
+import 'deneme1/common/widgets/bottom_bar.dart';
+import 'deneme1/constants/global_variables.dart';
+import 'deneme1/features/admin/screens/admin_screen.dart';
+import 'deneme1/features/auth/screens/auth_screen.dart';
+import 'deneme1/features/auth/services/auth_service.dart';
+import 'deneme1/providers/user_provider.dart';
+import 'deneme1/router.dart';
 
 void main() {
   runApp(MultiProvider(providers: [
@@ -52,12 +53,13 @@ class _MyAppState extends State<MyApp> {
         ),
         useMaterial3: true, // can remove this line
       ),
-      onGenerateRoute: (settings) => generateRoute(settings),
-      home: Provider.of<UserProvider>(context).user.token.isNotEmpty
-          ? Provider.of<UserProvider>(context).user.type == 'user'
-              ? const BottomBar()
-              : const AdminScreen()
-          : const AuthScreen(),
+      home: HomeScreen(),
+      // onGenerateRoute: (settings) => generateRoute(settings),
+      // home: Provider.of<UserProvider>(context).user.token.isNotEmpty
+      //     ? Provider.of<UserProvider>(context).user.type == 'user'
+      //         ? const BottomBar()
+      //         : const AdminScreen()
+      //     : const AuthScreen(),
     );
   }
 }
